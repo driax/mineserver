@@ -106,6 +106,23 @@ Mineserver requires the following libraries:
 
     `brew install libevent libnoise`
 
+**Configuring the build with CMake:**
+CMake can configure some aspects of the build and how it should instruct make
+to install mineserver.
+
+To set a CMake variable, add an argument to CMake's command line in the form:
+*-DVARIABLE=VALUE* or *-DVARIABLE:TYPE=VALUE* (the latter form is most useful
+for packagers and is optional).
+
+A (non-exhaustive) list of CMake variables is below.
+
+ * CMAKE\_INSTALL\_PREFIX
+ * CMAKE\_BUILD\_TYPE
+ * CONFIG\_DIR\_BIN
+ * CONFIG\_DIR\_ETC
+ * CONFIG\_DIR\_LIB
+
+The optional **TYPE** parameter can be one of: BOOL, PATH, FILEPATH or STRING.
 
 **Compiling using Linux (cmake & make & g++):**
 
